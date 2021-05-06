@@ -22,14 +22,12 @@ public class Journal {
             generator = "journal_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "sbj_id")
-    private String sbjID;
-    @Column(name = "date")
-    private Date date;
     @Column(name = "stud_id")
     private String studId;
+    @Column(name = "grade_type_id")
+    private String gradeTypeId;
     @Column(name = "grade")
-    private String grade;
-    @Column(name = "teach_id")
-    private Integer teachId;
+    private Integer grade;
+    @Column(name = "time_table_id")
+    private Integer timeTableId;
 }

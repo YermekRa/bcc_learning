@@ -7,7 +7,7 @@ services:
     container_name: postgres-btm-team1-local
     restart: on-failure
     environment:
-      POSTGRES_DB: sms
+      POSTGRES_DB: btm
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
     ports:

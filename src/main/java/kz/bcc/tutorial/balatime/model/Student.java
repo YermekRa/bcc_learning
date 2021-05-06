@@ -24,10 +24,12 @@ public class Student {
     private Integer id;
     @Column(name = "user_id")
     private String userId;
-    @Column(name = "fullname")
-    private String fullName;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "last_name")
+    private String lastName;
     @Column(name = "class_id")
     private String classId;
-    @Column(name = "bird")
-    private Date bird;
+    @Column(name = "birth_date")
+    private Date birthDate;
 }

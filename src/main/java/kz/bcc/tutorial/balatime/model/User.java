@@ -21,10 +21,12 @@ public class User {
             generator = "user_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "code")
+    @Column(name = "role_id")
     private String code;
     @Column(name = "login")
     private String login;
     @Column(name = "password")
     private String password;
+    @Column(name = "arcfl")
+    private Integer arcfl;
 }
