@@ -22,7 +22,7 @@ public class User {
     @Column(name = "id")
     private Integer id;
     @Column(name = "role_id")
-    private String code;
+    private Integer roleId;
     @Column(name = "login")
     private String login;
     @Column(name = "password")

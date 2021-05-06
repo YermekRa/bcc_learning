@@ -16,5 +16,5 @@ public class Teacher_Subj {
     @Column(name = "teacher_id")
     private Integer teacherId;
     @Column(name = "subj_id")
-    private String subjId;
+    private Integer subjId;
 }
