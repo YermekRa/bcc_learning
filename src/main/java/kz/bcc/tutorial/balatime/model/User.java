@@ -1,13 +1,17 @@
 package kz.bcc.tutorial.balatime.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
 
-@Data
-@Table(name = "User", schema = "public")
-
+@Table(name = "user", schema = "public")
+@Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Setter
+@Getter
 public class User {
     @Id
     @SequenceGenerator(name = "user_id_seq",

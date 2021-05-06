@@ -1,12 +1,17 @@
 package kz.bcc.tutorial.balatime.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
 
-@Data
-@Table(name = "Journal", schema = "public")
+@Table(name = "journal", schema = "public")
+@Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Setter
+@Getter
 
 public class Journal {
     @Id
