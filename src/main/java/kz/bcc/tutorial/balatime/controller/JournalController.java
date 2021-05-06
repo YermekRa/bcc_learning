@@ -30,7 +30,7 @@ public class JournalController {
     public ResponseEntity<Journal> calculateTestObject(@RequestBody Journal journal) {
         return ResponseEntity.ok(journalService.create(journal));
     }
-    @ApiOperation(value = "Get All journal")
+    @ApiOperation(value = "Get journal by Id")
     @GetMapping("/id/{id}")
     public ResponseEntity<Journal> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(journalService.getById(id));
