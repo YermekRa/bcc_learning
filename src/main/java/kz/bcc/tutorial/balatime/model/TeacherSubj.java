@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @Setter
 @Getter
-public class Teacher_Subj {
+public class TeacherSubj {
     @Id
     @Column(name = "teacher_id")
     private Integer teacherId;
