@@ -23,11 +23,11 @@ public class Journal {
     @Column(name = "id")
     private Integer id;
     @Column(name = "stud_id")
-    private String studId;
+    private Integer studId;
     @Column(name = "grade_type_id")
-    private String gradeTypeId;
+    private Integer gradeTypeId;
     @Column(name = "grade")
-    private Integer grade;
+    private String grade;
     @Column(name = "time_table_id")
     private Integer timeTableId;
 }

@@ -19,5 +19,5 @@ public class Class_Subj {
     @Column(name = "class_id")
     private Integer classId;
     @Column(name = "subj_id")
-    private String subjId;
+    private Integer subjId;
 }
