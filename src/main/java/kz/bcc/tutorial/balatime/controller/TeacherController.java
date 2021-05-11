@@ -18,7 +18,7 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
-    @ApiOperation(value = "Get All teachers")
+    @ApiOperation(value = "Get All records")
     @GetMapping("/all")
     public ResponseEntity<List<Teacher>> getAll() {
         return ResponseEntity.ok(teacherService.getAll());
@@ -29,7 +29,7 @@ public class TeacherController {
     public ResponseEntity<Teacher> calculateTestObject(@RequestBody Teacher teacher) {
         return ResponseEntity.ok(teacherService.create(teacher));
     }
-    @ApiOperation(value = "Get All teachers")
+    @ApiOperation(value = "Get teacher by id")
     @GetMapping("/id/{id}")
     public ResponseEntity<Teacher> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(teacherService.getById(id));

@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value = "Get All users")
+    @ApiOperation(value = "Get All records")
     @GetMapping("/all")
     public ResponseEntity<List<User>> getAll() {
         return ResponseEntity.ok(userService.getAll());
@@ -28,7 +28,7 @@ public class UserController {
     public ResponseEntity<User> calculateTestObject(@RequestBody User user) {
         return ResponseEntity.ok(userService.create(user));
     }
-    @ApiOperation(value = "Get All users")
+    @ApiOperation(value = "Get user by id")
     @GetMapping("/id/{id}")
     public ResponseEntity<User> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(userService.getById(id));

@@ -19,7 +19,7 @@ public class JournalController {
     private JournalService journalService;
 
 
-    @ApiOperation(value = "Get All journal")
+    @ApiOperation(value = "Get All records")
     @GetMapping("/all")
     public ResponseEntity<List<Journal>> getAll() {
         return ResponseEntity.ok(journalService.getAll());

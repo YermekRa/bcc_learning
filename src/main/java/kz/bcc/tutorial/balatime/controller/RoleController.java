@@ -17,7 +17,7 @@ public class RoleController {
     @Autowired
     private RoleService roleService;
 
-    @ApiOperation(value = "Get All role")
+    @ApiOperation(value = "Get All records")
     @GetMapping("/all")
     public ResponseEntity<List<Role>> getAll() {
         return ResponseEntity.ok(roleService.getAll());
@@ -28,7 +28,7 @@ public class RoleController {
     public ResponseEntity<Role> calculateTestObject(@RequestBody Role role) {
         return ResponseEntity.ok(roleService.create(role));
     }
-    @ApiOperation(value = "Get All role")
+    @ApiOperation(value = "Get role by id")
     @GetMapping("/id/{id}")
     public ResponseEntity<Role> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(roleService.getById(id));
