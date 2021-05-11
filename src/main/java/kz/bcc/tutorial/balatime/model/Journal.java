@@ -24,8 +24,8 @@ public class Journal {
     private Integer id;
     @Column(name = "stud_id")
     private Integer studId;
-    @Column(name = "grade_type_id")
-    private Integer gradeTypeId;
+    @Column(name = "grade_id")
+    private Integer gradeId;
     @Column(name = "grade")
     private String grade;
     @Column(name = "time_table_id")

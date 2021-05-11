@@ -18,6 +18,6 @@ public class ClassSubj {
     @Id
     @Column(name = "class_id")
     private Integer classId;
-    @Column(name = "subj_id")
-    private Integer subjId;
+    @Column(name = "subject_id")
+    private Integer subjectId;
 }
