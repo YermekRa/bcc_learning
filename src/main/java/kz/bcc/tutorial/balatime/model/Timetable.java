@@ -22,14 +22,14 @@ public class Timetable {
             generator = "timetable_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "sbj_id")
-    private Integer sbjId;
+    @Column(name = "subject_id")
+    private Integer subjectId;
     @Column(name = "date")
     private Date date;
     @Column(name = "room_id")
     private Integer roomId;
-    @Column(name = "teach_id")
-    private Integer teachId;
+    @Column(name = "teacher_id")
+    private Integer teacherId;
     @Column(name = "class_id")
     private Integer classId;
 

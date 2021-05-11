@@ -22,8 +22,8 @@ public class Journal {
             generator = "journal_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "stud_id")
-    private Integer studId;
+    @Column(name = "student_id")
+    private Integer studentId;
     @Column(name = "grade_id")
     private Integer gradeId;
     @Column(name = "grade")
