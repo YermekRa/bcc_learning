@@ -34,4 +34,10 @@ public class UserController {
         return ResponseEntity.ok(userService.getById(id));
     }
 
+    @ApiOperation(value = "Delete User by Id")
+    @DeleteMapping("/id/{id}")
+    public void deleteUserById(@PathVariable Integer id) {
+        userService.delete(id);
+    }
+
 }

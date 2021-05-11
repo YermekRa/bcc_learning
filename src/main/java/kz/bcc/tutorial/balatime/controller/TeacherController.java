@@ -34,4 +34,10 @@ public class TeacherController {
     public ResponseEntity<Teacher> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(teacherService.getById(id));
     }
+
+    @ApiOperation(value = "Delete Teacher by Id")
+    @DeleteMapping("/id/{id}")
+    public void deleteTeacherById(@PathVariable Integer id) {
+        teacherService.delete(id);
+    }
 }

@@ -37,6 +37,6 @@ public class JournalServiceImpl implements JournalService {
 
     @Override
     public void delete(Integer id) {
-
+         journalRepository.deleteById(id);
     }
 }

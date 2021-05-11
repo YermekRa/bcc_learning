@@ -35,4 +35,10 @@ public class JournalController {
     public ResponseEntity<Journal> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(journalService.getById(id));
     }
+
+    @ApiOperation(value = "Delete journal by Id")
+    @DeleteMapping("/id/{id}")
+    public void deleteJournalById(@PathVariable Integer id) {
+       journalService.delete(id);
+    }
 }

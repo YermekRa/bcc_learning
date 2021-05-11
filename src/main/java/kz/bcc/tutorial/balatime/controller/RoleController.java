@@ -33,4 +33,10 @@ public class RoleController {
     public ResponseEntity<Role> getTeacherById(@PathVariable Integer id) {
         return ResponseEntity.ok(roleService.getById(id));
     }
+
+    @ApiOperation(value = "Delete Role by Id")
+    @DeleteMapping("/id/{id}")
+    public void deleteRoleById(@PathVariable Integer id) {
+        roleService.delete(id);
+    }
 }
