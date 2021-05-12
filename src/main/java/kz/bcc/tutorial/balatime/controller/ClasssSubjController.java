@@ -1,8 +1,8 @@
 package kz.bcc.tutorial.balatime.controller;
 
 import io.swagger.annotations.ApiOperation;
-import kz.bcc.tutorial.balatime.model.Journal;
-import kz.bcc.tutorial.balatime.service.JournalService;
+import kz.bcc.tutorial.balatime.model.ClasssSubj;
+import kz.bcc.tutorial.balatime.service.ClasssSubjService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,32 +12,32 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value = "/api/private/v1/journal", produces = APPLICATION_JSON_VALUE)
-public class JournalController {
+@RequestMapping(value = "/api/private/v1/classssubj", produces = APPLICATION_JSON_VALUE)
+public class ClasssSubjController {
     @Autowired
-    private JournalService journalService;
+    private ClasssSubjService classsSubjService;
 
 
     @ApiOperation(value = "Get All records")
     @GetMapping("/all")
-    public ResponseEntity<List<Journal>> getAll() {
-        return ResponseEntity.ok(journalService.getAll());
+    public ResponseEntity<List<ClasssSubj>> getAll() {
+        return ResponseEntity.ok(classsSubjService.getAll());
     }
 
     @ApiOperation(value = "Create or update journal object")
     @PostMapping()
-    public ResponseEntity<Journal> calculateTestObject(@RequestBody Journal journal) {
-        return ResponseEntity.ok(journalService.create(journal));
+    public ResponseEntity<ClasssSubj> calculateTestObject(@RequestBody ClasssSubj classsSubj) {
+        return ResponseEntity.ok(classsSubjService.create(classsSubj));
     }
     @ApiOperation(value = "Get journal by Id")
     @GetMapping("/id/{id}")
-    public ResponseEntity<Journal> getTeacherById(@PathVariable Integer id) {
-        return ResponseEntity.ok(journalService.getById(id));
+    public ResponseEntity<ClasssSubj> getTeacherById(@PathVariable Integer id) {
+        return ResponseEntity.ok(classsSubjService.getById(id));
     }
 
     @ApiOperation(value = "Delete journal by Id")
     @DeleteMapping("/id/{id}")
     public void deleteJournalById(@PathVariable Integer id) {
-       journalService.delete(id);
+        classsSubjService.delete(id);
     }
 }

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Setter
 @Getter
-public class ClassSubj {
+public class ClasssSubj {
     @Id
     @Column(name = "class_id")
     private Integer classId;
