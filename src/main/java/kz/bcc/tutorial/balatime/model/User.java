@@ -9,7 +9,7 @@ import java.sql.Date;
 import java.util.Arrays;
 import java.util.Collection;
 
-@Table(name = "user", schema = "public")
+@Table(name = "b_user", schema = "public")
 
 @Builder(toBuilder = true)
 @NoArgsConstructor

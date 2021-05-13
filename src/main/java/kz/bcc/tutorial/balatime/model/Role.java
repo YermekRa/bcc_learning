@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.*;
 
 
-@Table(name = "role", schema = "public")
+@Table(name = "b_role", schema = "public")
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
