@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>1b5eb378-217d-44e5-adcf-17c25305e299.SCHEMA:btm.public</OriginalElement>
+  <nodes>
+    <node x="402.5866016535934" y="788.5000000000001">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.journal</node>
+    <node x="597.3843874352291" y="788.5000000000001">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.grade</node>
+    <node x="657.9860962157193" y="585.0">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.subject</node>
+    <node x="366.375" y="156.4820222270648">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher</node>
+    <node x="634.5435868868351" y="69.24199666834663">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_user</node>
+    <node x="221.18542209284522" y="380.7710297901641">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.room</node>
+    <node x="250.43447882931514" y="616.5">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.timetable</node>
+    <node x="63.38055948299046" y="293.67435444161185">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.classs</node>
+    <node x="645.0435868868351" y="-83.25195142206273">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_role</node>
+    <node x="770.8993073373072" y="271.67435444161185">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.student</node>
+    <node x="870.9999999999999" y="585.0">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.class_subj</node>
+    <node x="474.97219243143866" y="585.0">1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher_subj</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.timetable" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.room" relationship="REFERENCES">
+      <point x="-43.66666666666666" y="-83.5" />
+      <point x="272.2678121626485" y="503.7710297901641" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.classs" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.room" relationship="REFERENCES">
+      <point x="-32.75" y="-61.5" />
+      <point x="96.13055948299046" y="465.70158659724234" />
+      <point x="224.6374045571739" y="465.70158659724234" />
+      <point x="224.6374045571739" y="503.7710297901641" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_user" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_role" relationship="REFERENCES">
+      <point x="5.6843418860808015E-14" y="-72.5" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.journal" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.timetable" relationship="REFERENCES">
+      <point x="0.0" y="-72.5" />
+      <point x="473.5866016535934" y="909.0271680460598" />
+      <point x="406.59298908480264" y="909.0271680460598" />
+      <point x="406.59298908480264" y="826.0636919755307" />
+      <point x="315.93447882931514" y="826.0636919755307" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.student" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_user" relationship="REFERENCES">
+      <point x="0.0" y="-83.5" />
+      <point x="850.8993073373072" y="321.0" />
+      <point x="711.0435868868351" y="321.0" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.journal" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher" relationship="REFERENCES">
+      <point x="-17.75" y="-83.5" />
+      <point x="455.8366016535934" y="860.6696653472471" />
+      <point x="44.636989755542004" y="860.6696653472471" />
+      <point x="44.636989755542004" y="212.3123425692695" />
+      <point x="458.875" y="212.3123425692695" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.class_subj" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.subject" relationship="REFERENCES">
+      <point x="0.0" y="-39.5" />
+      <point x="934.9999999999999" y="555.0" />
+      <point x="803.0923893486868" y="555.0" />
+      <point x="803.0923893486868" y="586.256926952141" />
+      <point x="738.4860962157193" y="586.256926952141" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.journal" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.grade" relationship="REFERENCES">
+      <point x="-47.33333333333337" y="-72.5" />
+      <point x="426.25326832026" y="924.4531749852249" />
+      <point x="675.3843874352291" y="924.4531749852249" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.classs" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher" relationship="REFERENCES">
+      <point x="32.75" y="-61.5" />
+      <point x="161.63055948299046" y="282.04946611462196" />
+      <point x="458.875" y="282.04946611462196" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.timetable" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.subject" relationship="REFERENCES">
+      <point x="43.666666666666686" y="-83.5" />
+      <point x="359.6011454959818" y="733.9924433249371" />
+      <point x="738.4860962157193" y="733.9924433249371" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher_subj" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher" relationship="REFERENCES">
+      <point x="-32.75" y="-39.5" />
+      <point x="507.72219243143866" y="555.0" />
+      <point x="501.8796779417057" y="555.0" />
+      <point x="501.8796779417057" y="345.4820222270648" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.timetable" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher" relationship="REFERENCES">
+      <point x="0.0" y="-83.5" />
+      <point x="354.2900023989446" y="616.5" />
+      <point x="354.2900023989446" y="569.597788189148" />
+      <point x="394.97010315461205" y="569.597788189148" />
+      <point x="394.97010315461205" y="566.9910111135325" />
+      <point x="426.3211253288787" y="566.9910111135325" />
+      <point x="426.3211253288787" y="345.4820222270648" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.journal" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.student" relationship="REFERENCES">
+      <point x="47.33333333333337" y="-72.5" />
+      <point x="520.9199349869268" y="765.1334456871457" />
+      <point x="1029.3187087299116" y="765.1334456871457" />
+      <point x="1029.3187087299116" y="468.1356504685117" />
+      <point x="850.8993073373072" y="468.1356504685117" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher_subj" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.subject" relationship="REFERENCES">
+      <point x="32.75" y="-39.5" />
+      <point x="573.2221924314387" y="555.0" />
+      <point x="738.4860962157193" y="555.0" />
+      <point x="0.0" y="50.5" />
+    </edge>
+    <edge source="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.teacher" target="1b5eb378-217d-44e5-adcf-17c25305e299.TABLE:btm.public.b_user" relationship="REFERENCES">
+      <point x="0.0" y="-94.5" />
+      <point x="458.875" y="307.99444323382" />
+      <point x="683.9010574529343" y="307.99444323382" />
+      <point x="683.9010574529343" y="214.24199666834664" />
+      <point x="0.0" y="72.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8603715170278635" showDependencies="false" x="588.1844987133195" y="205.56135300467804" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

@@ -26,6 +26,8 @@ public class Journal {
     private Integer studentId;
     @Column(name = "grade_id")
     private Integer gradeId;
+    @Column(name = "teacher_id")
+    private Integer teacherId;
     @Column(name = "grade")
     private String grade;
     @Column(name = "timetable_id")
