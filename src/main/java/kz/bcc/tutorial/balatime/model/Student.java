@@ -22,7 +22,7 @@ public class Student {
             generator = "student_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "user_id")
+    @Column(name = "b_user_id")
     private Integer userId;
     @Column(name = "first_name")
     private String firstName;

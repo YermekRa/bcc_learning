@@ -28,6 +28,6 @@ public class Journal {
     private Integer gradeId;
     @Column(name = "grade")
     private String grade;
-    @Column(name = "time_table_id")
+    @Column(name = "timetable_id")
     private Integer timeTableId;
 }
