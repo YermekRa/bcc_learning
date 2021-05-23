@@ -1,8 +1,8 @@
-package kz.bcc.tutorial.balatime.service.impl;
+package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Student;
 import kz.bcc.tutorial.balatime.repository.StudentRepository;
-import kz.bcc.tutorial.balatime.service.StudentService;
+import kz.bcc.tutorial.balatime.service.adminUser.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

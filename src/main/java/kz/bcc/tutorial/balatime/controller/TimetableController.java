@@ -2,7 +2,7 @@ package kz.bcc.tutorial.balatime.controller;
 
 import io.swagger.annotations.ApiOperation;
 import kz.bcc.tutorial.balatime.model.Timetable;
-import kz.bcc.tutorial.balatime.service.TimetableService;
+import kz.bcc.tutorial.balatime.service.adminUser.TimetableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

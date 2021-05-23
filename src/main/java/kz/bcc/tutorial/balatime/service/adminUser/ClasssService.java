@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.service;
+package kz.bcc.tutorial.balatime.service.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Classs;
 

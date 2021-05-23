@@ -1,8 +1,8 @@
-package kz.bcc.tutorial.balatime.service.impl;
+package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Role;
 import kz.bcc.tutorial.balatime.repository.RoleRepository;
-import kz.bcc.tutorial.balatime.service.RoleService;
+import kz.bcc.tutorial.balatime.service.adminUser.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

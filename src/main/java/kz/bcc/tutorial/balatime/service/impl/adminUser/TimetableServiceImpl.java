@@ -1,8 +1,8 @@
-package kz.bcc.tutorial.balatime.service.impl;
+package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Timetable;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
-import kz.bcc.tutorial.balatime.service.TimetableService;
+import kz.bcc.tutorial.balatime.service.adminUser.TimetableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
