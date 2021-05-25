@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.controller;
+package kz.bcc.tutorial.balatime.controller.adminUser;
 
 import io.swagger.annotations.ApiOperation;
 import kz.bcc.tutorial.balatime.model.Room;
