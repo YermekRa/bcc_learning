@@ -1,5 +1,6 @@
 package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
+import com.google.gson.Gson;
 import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.repository.UserRepository;
 import kz.bcc.tutorial.balatime.service.adminUser.UserService;
@@ -19,7 +20,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public User create(User user) {
-        return userRepository.save(user);
+        System.out.println(new Gson().toJson(user));
+        return userRepository.saveAndFlush(user);
     }
 
     @Override
