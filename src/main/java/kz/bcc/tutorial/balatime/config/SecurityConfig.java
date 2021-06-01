@@ -21,10 +21,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/auth/**").permitAll()
-                .antMatchers("/api/private/v1/user/**").permitAll()
+                .antMatchers("/api/private/v1/**").permitAll()
                 .antMatchers("/api/private/v1/role/**").permitAll()
                 .antMatchers("/api/private/v1/teacher/**").permitAll()
                 .antMatchers("/api/private/v1/teacher/**").permitAll()
+                .antMatchers("/api/private/v1/student/**").permitAll()
                 .antMatchers("/api/private/v1/room/**").hasAuthority("TEACHER")
 //                .antMatchers("/users/create").hasAuthority("ADMIN")
                 .antMatchers("/v2/api-docs",
