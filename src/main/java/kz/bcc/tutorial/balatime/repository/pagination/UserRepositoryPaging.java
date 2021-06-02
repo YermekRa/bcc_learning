@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.repository;
+package kz.bcc.tutorial.balatime.repository.pagination;
 
 import kz.bcc.tutorial.balatime.model.User;
 import org.springframework.data.domain.Page;
