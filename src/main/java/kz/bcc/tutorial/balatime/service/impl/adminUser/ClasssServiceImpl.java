@@ -2,8 +2,12 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Classs;
 import kz.bcc.tutorial.balatime.repository.ClasssRepository;
+import kz.bcc.tutorial.balatime.repository.pagination.GroupRepositoryPaging;
 import kz.bcc.tutorial.balatime.service.adminUser.ClasssService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +17,8 @@ import java.util.Optional;
 public class ClasssServiceImpl implements ClasssService {
     @Autowired
     public ClasssRepository classsRepository;
-
+    @Autowired
+    private GroupRepositoryPaging groupRepositoryPaging;
 
     @Override
     public Classs create(Classs classs) {
@@ -38,5 +43,11 @@ public class ClasssServiceImpl implements ClasssService {
     @Override
     public void delete(Integer id) {
         classsRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Classs> getAllByPageAndSize(Integer page, Integer size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return groupRepositoryPaging.findAll(pageable);
     }
 }

@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import kz.bcc.tutorial.balatime.model.Timetable;
 import kz.bcc.tutorial.balatime.service.adminUser.TimetableService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,5 +39,14 @@ public class TimetableController {
     @DeleteMapping("/id/{id}")
     public void deleteTeacherById(@PathVariable Integer id) {
         timetableService.delete(id);
+    }
+
+    @ApiOperation(value = "Get Timetable page")
+    @GetMapping("/page/{page}/size/{size}")
+    public ResponseEntity<Page<Timetable>> getByPageAndSize(
+            @PathVariable Integer page,
+            @PathVariable Integer size
+    ) {
+        return ResponseEntity.ok(timetableService.getAllByPageAndSize(page, size));
     }
 }
