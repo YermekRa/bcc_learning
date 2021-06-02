@@ -21,8 +21,11 @@ public class Teacher {
             generator = "teacher_id_seq")
     @Column(name = "id")
     private Integer id;
-    @Column(name = "b_user_id")
-    private Integer userId;
+
+    @ManyToOne
+    @JoinColumn(name = "b_user_id")
+    private User user;
+
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
