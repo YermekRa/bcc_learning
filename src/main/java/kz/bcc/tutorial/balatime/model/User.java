@@ -44,6 +44,8 @@ public class User implements UserDetails {
     private String password;
     @Column(name = "arcfl")
     private Integer arcfl;
+    @Column(name = "role_id", insertable = false, updatable = false)
+    private Integer roleId;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

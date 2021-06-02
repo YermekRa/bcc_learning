@@ -56,15 +56,6 @@ public class UserController {
         userService.delete(id);
     }
 
-    @GetMapping("/all/pagination/")
-    @ApiOperation(value = "Find all byapi/private/v1/user request by procId, taskId")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "page", dataType = "int", value = "№ страницы с которой нужно отображать.", paramType = "query"),
-            @ApiImplicitParam(name = "size", dataType = "int", value = "Кол-во записей на одной странице.", paramType = "query")
-    })
-    public CustomPagination getAllByPaginationProcIdOrTaskId(@ApiParam(hidden = true) @RequestParam Map<String, String> allRequestParams) {
-        return userService.getAllByPaginationProcIdOrTaskId(allRequestParams);
-    }
 }
 
 
