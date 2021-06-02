@@ -1,6 +1,8 @@
 package kz.bcc.tutorial.balatime.model;
 
 import lombok.*;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +10,8 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 @Table(name = "b_user", schema = "public")
 
@@ -27,10 +31,10 @@ public class User implements UserDetails {
     @Column(name = "id")
     private Integer id;
 
-//    @Column(name = "role_id")
+    //    @Column(name = "role_id")
 //    private Integer roleId;
     @ManyToOne
-    @JoinColumn(name="role_id")
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Column(name = "login", unique = true)
@@ -76,3 +80,4 @@ public class User implements UserDetails {
         return true;
     }
 }
+
