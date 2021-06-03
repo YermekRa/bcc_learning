@@ -36,7 +36,7 @@ public class UserController {
 
     @ApiOperation(value = "Get user by id")
     @GetMapping("/id/{id}")
-    public ResponseEntity<User> getTeacherById(@PathVariable Integer id) {
+    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
         return ResponseEntity.ok(userService.getById(id));
     }
 
