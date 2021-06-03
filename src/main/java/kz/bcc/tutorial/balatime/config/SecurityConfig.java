@@ -28,6 +28,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/private/v1/student/**").permitAll()
                 .antMatchers("/api/private/v1/room/**").hasAuthority("TEACHER")
 //                .antMatchers("/users/create").hasAuthority("ADMIN")
+                .antMatchers("/api/private/v1/**").permitAll()
+                .antMatchers("/api/private/v1/user/**").hasRole("ADMIN")
+                .antMatchers("/api/private/v1/role/**").hasRole("TEACHER")
+                .antMatchers("/api/private/v1/room/**").hasRole("STUDENT")
                 .antMatchers("/v2/api-docs",
                         "/configuration/ui",
                         "/swagger-resources/**",

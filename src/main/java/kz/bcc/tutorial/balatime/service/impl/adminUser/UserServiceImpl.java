@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 
 import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.repository.UserRepository;
-import kz.bcc.tutorial.balatime.repository.UserRepositoryPaging;
+import kz.bcc.tutorial.balatime.repository.pagination.UserRepositoryPaging;
 import kz.bcc.tutorial.balatime.service.adminUser.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -16,7 +16,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service

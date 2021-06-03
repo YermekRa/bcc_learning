@@ -14,9 +14,7 @@ public interface UserService {
 
     List<User> getAll();
 
-
     void delete(Integer id);
-
 
     Page<User> getAllByPageAndSize(Integer page, Integer size);  //pagination
 }
