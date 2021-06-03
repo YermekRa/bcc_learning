@@ -34,7 +34,7 @@ public class User implements UserDetails {
     //    @Column(name = "role_id")
 //    private Integer roleId;
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id", insertable = false, updatable = false)
     private Role role;
 
     @Column(name = "login", unique = true)
@@ -44,7 +44,7 @@ public class User implements UserDetails {
     private String password;
     @Column(name = "arcfl")
     private Integer arcfl;
-    @Column(name = "role_id", insertable = false, updatable = false)
+    @Column(name = "role_id") //
     private Integer roleId;
 
     @Override
