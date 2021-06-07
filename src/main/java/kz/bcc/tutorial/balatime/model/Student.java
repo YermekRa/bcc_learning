@@ -28,6 +28,9 @@ public class Student {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+    @ManyToOne
+    @JoinColumn(name = "class_id", insertable = false, updatable = false)
+    private Classs classs;
     @Column(name = "class_id")
     private Integer classId;
     @Column(name = "birth_date")
