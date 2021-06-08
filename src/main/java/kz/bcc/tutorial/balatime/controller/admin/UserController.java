@@ -1,9 +1,6 @@
-package kz.bcc.tutorial.balatime.controller.adminUser;
+package kz.bcc.tutorial.balatime.controller.admin;
 
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.service.adminUser.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 

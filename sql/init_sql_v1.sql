@@ -1,22 +1,22 @@
-create sequence class_id_seq;
+create sequence if not exists class_id_seq;
 
-create sequence grade_id_seq;
+create sequence if not exists grade_id_seq;
 
-create sequence journal_id_seq;
+create sequence if not exists journal_id_seq;
 
-create sequence role_id_seq;
+create sequence if not exists role_id_seq;
 
-create sequence room_id_seq;
+create sequence if not exists room_id_seq;
 
-create sequence student_id_seq;
+create sequence if not exists student_id_seq;
 
-create sequence subject_id_seq;
+create sequence if not exists subject_id_seq;
 
-create sequence teacher_id_seq;
+create sequence if not exists teacher_id_seq;
 
-create sequence timetable_id_seq;
+create sequence if not exists timetable_id_seq;
 
-create sequence user_id_seq;
+create sequence if not exists user_id_seq;
 
 create table if not exists b_role
 (
