@@ -8,4 +8,5 @@ public class LessonItem {
     private String teacher;
     private String classRoom;
     private String group;
+    private boolean free;
 }

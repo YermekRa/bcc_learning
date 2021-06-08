@@ -1,6 +1,7 @@
 package kz.bcc.tutorial.balatime.controller.adminUser;
 
 import io.swagger.annotations.ApiOperation;
+import kz.bcc.tutorial.balatime.model.EduYear;
 import kz.bcc.tutorial.balatime.model.dto.SchedulerRow;
 import kz.bcc.tutorial.balatime.service.TeacherSchedulerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +22,8 @@ public class TeacherSchedulerController {
     @GetMapping("/all/teacherId/{teacherId}")
     public ResponseEntity<List<SchedulerRow>> getAll(
             @PathVariable Integer teacherId,
-            @RequestParam Integer year,
-            @RequestParam Integer month,
-            @RequestParam Integer day
+            @RequestParam EduYear eduYear
     ) {
-        return ResponseEntity.ok(teacherSchedulerService.getAll(teacherId, year, month, day));
+        return ResponseEntity.ok(teacherSchedulerService.getAll(teacherId, eduYear));
     }
 }

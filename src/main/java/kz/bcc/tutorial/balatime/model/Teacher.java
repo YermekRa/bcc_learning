@@ -23,9 +23,11 @@ public class Teacher {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "b_user_id")
+    @JoinColumn(name = "b_user_id", insertable = false, updatable = false)
     private User user;
 
+    @Column(name = "b_user_id")
+    private Integer userId;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")
