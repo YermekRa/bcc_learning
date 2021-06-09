@@ -53,7 +53,7 @@ public class TeacherWorkspaceServiceImpl implements TeacherWorkspaceService {
         } else {
             lessonItem.setClassRoom("");
             lessonItem.setGroup("");
-            lessonItem.setName("empty");
+            lessonItem.setName("Записи нет");
             lessonItem.setTeacher("");
             lessonItem.setFree(true);
         }
