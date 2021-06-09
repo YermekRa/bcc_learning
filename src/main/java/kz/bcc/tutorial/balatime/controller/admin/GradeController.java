@@ -17,27 +17,27 @@ public class GradeController {
     @Autowired
     private GradeService gradeService;
 
-
-    @ApiOperation(value = "Get All records")
+    @ApiOperation(value = "Get All grades")
     @GetMapping("/all")
-    public ResponseEntity<List<Grade>> getAll() {
-        return ResponseEntity.ok(gradeService.getAll());
+    public List<Grade> getAll(){
+        return gradeService.getAll();
     }
 
-    @ApiOperation(value = "Create or update journal object")
-    @PostMapping()
-    public ResponseEntity<Grade> calculateTestObject(@RequestBody Grade grade) {
-        return ResponseEntity.ok(gradeService.create(grade));
-    }
     @ApiOperation(value = "Get grade by Id")
     @GetMapping("/id/{id}")
-    public ResponseEntity<Grade> getTeacherById(@PathVariable Integer id) {
-        return ResponseEntity.ok(gradeService.getById(id));
+    public Grade getGradeById(@PathVariable Integer id){
+        return gradeService.getById(id);
     }
 
-    @ApiOperation(value = "Delete grade by Id")
-    @DeleteMapping("/id/{id}")
-    public void deleteJournalById(@PathVariable Integer id) {
-        gradeService.delete(id);
+    @ApiOperation(value = "Create or update grade object")
+    @PostMapping()
+    public Grade createGrade(@RequestBody Grade grade) {
+        return gradeService.create(grade);
+    }
+
+    @ApiOperation(value = "Delete grade object")
+    @DeleteMapping("/delete/{id}")
+    public void deleteGrade(@PathVariable Integer id) {
+        gradeService.deleteById(id);
     }
 }
