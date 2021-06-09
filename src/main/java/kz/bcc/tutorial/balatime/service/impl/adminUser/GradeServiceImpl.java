@@ -2,7 +2,7 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Grade;
 import kz.bcc.tutorial.balatime.repository.GradeRepository;
-import kz.bcc.tutorial.balatime.service.adminUser.GradeService;
+import kz.bcc.tutorial.balatime.service.admin.GradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

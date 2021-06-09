@@ -2,7 +2,7 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 
 import kz.bcc.tutorial.balatime.model.Room;
 import kz.bcc.tutorial.balatime.repository.RoomRepository;
-import kz.bcc.tutorial.balatime.service.adminUser.RoomService;
+import kz.bcc.tutorial.balatime.service.admin.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

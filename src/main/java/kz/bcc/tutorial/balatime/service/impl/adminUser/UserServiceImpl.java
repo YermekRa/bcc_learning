@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.repository.UserRepository;
 import kz.bcc.tutorial.balatime.repository.pagination.UserRepositoryPaging;
-import kz.bcc.tutorial.balatime.service.adminUser.UserService;
+import kz.bcc.tutorial.balatime.service.admin.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Page;

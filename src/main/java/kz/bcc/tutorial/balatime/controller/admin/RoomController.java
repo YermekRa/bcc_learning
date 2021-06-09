@@ -2,7 +2,7 @@ package kz.bcc.tutorial.balatime.controller.admin;
 
 import io.swagger.annotations.ApiOperation;
 import kz.bcc.tutorial.balatime.model.Room;
-import kz.bcc.tutorial.balatime.service.adminUser.RoomService;
+import kz.bcc.tutorial.balatime.service.admin.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
