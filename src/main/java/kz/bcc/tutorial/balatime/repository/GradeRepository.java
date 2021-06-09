@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GradeRepository extends JpaRepository< Grade, Integer> {
+    Grade findByCode(String code);
+    boolean existsByCode(String code);
 }

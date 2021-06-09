@@ -5,11 +5,9 @@ import kz.bcc.tutorial.balatime.model.Grade;
 import java.util.List;
 
 public interface GradeService {
-    Grade create(Grade journal);
-
-    Grade getById(Integer id);
-
+    Grade getById(int id);
+    Grade create(Grade grade);
     List<Grade> getAll();
-
-    void delete(Integer id);
+    Grade getByCode(String code);
+    void deleteById(Integer id);
 }

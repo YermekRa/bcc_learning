@@ -15,29 +15,29 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RequestMapping(value = "/api/private/v1/room", produces = APPLICATION_JSON_VALUE)
 public class RoomController {
     @Autowired
-    private RoomService roomService;
+    RoomService roomService;
 
-
-    @ApiOperation(value = "Get All records")
+    @ApiOperation(value = "Get All rooms")
     @GetMapping("/all")
-    public ResponseEntity<List<Room>> getAll() {
-        return ResponseEntity.ok(roomService.getAll());
+    public List<Room> getAll() {
+        return roomService.getAll();
     }
 
-    @ApiOperation(value = "Create or update journal object")
+    @ApiOperation(value = "Create or update room object")
     @PostMapping()
-    public ResponseEntity<Room> calculateTestObject(@RequestBody Room room) {
-        return ResponseEntity.ok(roomService.create(room));
-    }
-    @ApiOperation(value = "Get room by Id")
-    @GetMapping("/id/{id}")
-    public ResponseEntity<Room> getTeacherById(@PathVariable Integer id) {
-        return ResponseEntity.ok(roomService.getById(id));
+    public Room createRoom(@RequestBody Room room) {
+        return roomService.create(room);
     }
 
-    @ApiOperation(value = "Delete room by Id")
-    @DeleteMapping("/id/{id}")
-    public void deleteJournalById(@PathVariable Integer id) {
-        roomService.delete(id);
+    @ApiOperation(value = "Get room by id")
+    @GetMapping("/id/{id}")
+    public Room getRoomById(@PathVariable Integer id) {
+        return roomService.getById(id);
+    }
+
+    @ApiOperation(value = "Delete grade object")
+    @DeleteMapping("/delete/{id}")
+    public void deleteRoom(@PathVariable Integer id) {
+        roomService.deleteById(id);
     }
 }

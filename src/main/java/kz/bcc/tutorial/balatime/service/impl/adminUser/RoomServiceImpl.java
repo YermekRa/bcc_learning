@@ -12,22 +12,19 @@ import java.util.Optional;
 @Service
 public class RoomServiceImpl implements RoomService {
     @Autowired
-    public RoomRepository roomRepository;
-
+    RoomRepository roomRepository;
 
     @Override
-    public Room create(Room journal) {
-        return roomRepository.save(journal);
+    public Room getById(int id) {
+        return roomRepository.findById(id).get();
     }
 
     @Override
-    public Room getById(Integer id) {
-        Optional<Room> optionalRoom = roomRepository.findById(id);
-        if (optionalRoom.isPresent()) {
-            return roomRepository.findById(id).get();
-        } else {
+    public Room create(Room room) {
+        if (roomRepository.existsByCode(room.getCode())) {
             return null;
         }
+        return roomRepository.save(room);
     }
 
     @Override
@@ -36,7 +33,7 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void deleteById(Integer id) {
         roomRepository.deleteById(id);
     }
 }

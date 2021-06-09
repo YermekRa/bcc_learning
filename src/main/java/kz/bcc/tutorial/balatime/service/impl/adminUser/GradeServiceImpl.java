@@ -12,22 +12,20 @@ import java.util.Optional;
 @Service
 public class GradeServiceImpl implements GradeService {
     @Autowired
-    public GradeRepository gradeRepository;
-
+    private GradeRepository gradeRepository;
 
     @Override
-    public Grade create(Grade journal) {
-        return gradeRepository.save(journal);
+    public Grade getById(int id) {
+        return gradeRepository.findById(id).get();
     }
 
     @Override
-    public Grade getById(Integer id) {
-        Optional<Grade> optionalGrade = gradeRepository.findById(id);
-        if (optionalGrade.isPresent()) {
-            return gradeRepository.findById(id).get();
-        } else {
-            return null;
+    public Grade create(Grade grade) {
+        String userAction = "insert";
+        if (gradeRepository.existsByCode(grade.getCode())) {
+            userAction = "update";
         }
+        return gradeRepository.save(grade);
     }
 
     @Override
@@ -36,7 +34,14 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public Grade getByCode(String code) {
+        return gradeRepository.findByCode(code);
+    }
+
+    @Override
+    public void deleteById(Integer id) {
         gradeRepository.deleteById(id);
     }
+
+
 }

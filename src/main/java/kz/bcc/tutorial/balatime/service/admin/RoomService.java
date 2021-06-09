@@ -5,11 +5,8 @@ import kz.bcc.tutorial.balatime.model.Room;
 import java.util.List;
 
 public interface RoomService {
-    Room create(Room journal);
-
-    Room getById(Integer id);
-
+    Room getById(int id);
+    Room create(Room role);
     List<Room> getAll();
-
-    void delete(Integer id);
+    void deleteById(Integer id);
 }
