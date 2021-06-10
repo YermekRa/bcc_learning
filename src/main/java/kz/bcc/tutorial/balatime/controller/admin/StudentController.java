@@ -31,7 +31,7 @@ public class StudentController {
     }
     @ApiOperation(value = "Get student by id")
     @GetMapping("/id/{id}")
-    public ResponseEntity<Student> getTeacherById(@PathVariable Integer id) {
+    public ResponseEntity<Student> getStudentById(@PathVariable Integer id) {
         return ResponseEntity.ok(studentService.getById(id));
     }
 
