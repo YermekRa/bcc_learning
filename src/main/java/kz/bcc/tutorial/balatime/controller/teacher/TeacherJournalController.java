@@ -19,7 +19,7 @@ public class TeacherJournalController {
     TeacherJournalService teacherJournalService;
 
     @ApiOperation(value = "Get SchedulerRow map")
-    @GetMapping("/all/teacherId/{teacherId}")
+    @GetMapping("/lesson")
     public ResponseEntity<List<TeacherJournalDto>> getAll(
 
 
