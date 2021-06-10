@@ -2,8 +2,8 @@ package kz.bcc.tutorial.balatime.service.impl;
 
 import kz.bcc.tutorial.balatime.model.EduYear;
 import kz.bcc.tutorial.balatime.model.Timetable;
-import kz.bcc.tutorial.balatime.model.dto.LessonItem;
-import kz.bcc.tutorial.balatime.model.dto.SchedulerRow;
+import kz.bcc.tutorial.balatime.model.dto.teacher.LessonItem;
+import kz.bcc.tutorial.balatime.model.dto.teacher.SchedulerRow;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
 import kz.bcc.tutorial.balatime.service.admin.TeacherSchedulerService;
 import org.springframework.beans.factory.annotation.Autowired;

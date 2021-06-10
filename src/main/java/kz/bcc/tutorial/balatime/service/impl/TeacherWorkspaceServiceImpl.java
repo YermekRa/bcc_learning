@@ -1,8 +1,8 @@
 package kz.bcc.tutorial.balatime.service.impl;
 
 import kz.bcc.tutorial.balatime.model.Timetable;
-import kz.bcc.tutorial.balatime.model.dto.LessonItem;
-import kz.bcc.tutorial.balatime.model.dto.WorkspaceRow;
+import kz.bcc.tutorial.balatime.model.dto.teacher.LessonItem;
+import kz.bcc.tutorial.balatime.model.dto.teacher.WorkspaceRow;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
 
 import kz.bcc.tutorial.balatime.service.admin.TeacherWorkspaceService;

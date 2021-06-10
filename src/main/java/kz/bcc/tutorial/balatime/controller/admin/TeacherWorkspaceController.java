@@ -1,16 +1,12 @@
 package kz.bcc.tutorial.balatime.controller.admin;
 
 import io.swagger.annotations.ApiOperation;
-import kz.bcc.tutorial.balatime.model.EduYear;
-import kz.bcc.tutorial.balatime.model.dto.SchedulerRow;
-import kz.bcc.tutorial.balatime.model.dto.WorkspaceRow;
-import kz.bcc.tutorial.balatime.service.admin.TeacherSchedulerService;
+import kz.bcc.tutorial.balatime.model.dto.teacher.WorkspaceRow;
 import kz.bcc.tutorial.balatime.service.admin.TeacherWorkspaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.DayOfWeek;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;

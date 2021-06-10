@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.service.impl.adminUser;
+package kz.bcc.tutorial.balatime.service.impl.admin;
 
 import kz.bcc.tutorial.balatime.model.Grade;
 import kz.bcc.tutorial.balatime.repository.GradeRepository;
@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class GradeServiceImpl implements GradeService {

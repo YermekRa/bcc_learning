@@ -1,6 +1,6 @@
 package kz.bcc.tutorial.balatime.service.admin;
 
-import kz.bcc.tutorial.balatime.model.dto.WorkspaceRow;
+import kz.bcc.tutorial.balatime.model.dto.teacher.WorkspaceRow;
 
 import java.util.List;
 

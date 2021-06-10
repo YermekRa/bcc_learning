@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.service.impl.adminUser;
+package kz.bcc.tutorial.balatime.service.impl.admin;
 
 import kz.bcc.tutorial.balatime.model.CustomPagination;
 import kz.bcc.tutorial.balatime.model.Subject;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Service
 public class SubjectServiceImpl implements SubjectService {
