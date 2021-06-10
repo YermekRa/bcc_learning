@@ -3,6 +3,7 @@ package kz.bcc.tutorial.balatime.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "classs", schema = "public")
 @Builder(toBuilder = true)
@@ -26,4 +27,11 @@ public class Classs {
     private Integer teacherId;
     @Column(name = "room_id")
     private Integer roomId;
+
+    /*@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "classs_subject",
+            joinColumns = {@JoinColumn(name = "classs_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "subject_id", referencedColumnName = "id")}
+    )
+    private List<Subject> subjects;*/
 }

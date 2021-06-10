@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Table(name = "teacher", schema = "public")
 @Builder(toBuilder = true)
@@ -38,5 +39,12 @@ public class Teacher {
     private String level;
     @Column(name = "birth_date")
     private Date birthdate;
+
+    /*@ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "teacher_subject",
+            joinColumns = {@JoinColumn(name = "teacher_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "subject_id", referencedColumnName = "id")}
+    )
+    private List<Subject> subjectsT;*/
 
 }
