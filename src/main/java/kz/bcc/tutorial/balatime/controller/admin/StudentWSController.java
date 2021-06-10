@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiOperation;
 import kz.bcc.tutorial.balatime.model.Grade;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentHTDLItem;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentLessons;
-import kz.bcc.tutorial.balatime.service.adminUser.StudentWSService;
+import kz.bcc.tutorial.balatime.service.admin.StudentWSService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

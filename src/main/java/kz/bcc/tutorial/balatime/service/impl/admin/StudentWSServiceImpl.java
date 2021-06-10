@@ -3,7 +3,7 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentHTDLItem;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentHTDLItemContent;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentLessons;
-import kz.bcc.tutorial.balatime.service.adminUser.StudentWSService;
+import kz.bcc.tutorial.balatime.service.admin.StudentWSService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
