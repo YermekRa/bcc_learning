@@ -14,4 +14,5 @@ public class SchedulerRow {
     private LessonItem l3;
     private LessonItem l4;
     private LessonItem l5;
+    private LessonItem l6;
 }

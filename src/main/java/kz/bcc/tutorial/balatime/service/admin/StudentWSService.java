@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.service.adminUser;
+package kz.bcc.tutorial.balatime.service.admin;
 
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentHTDLItem;
 import kz.bcc.tutorial.balatime.model.dto.studentUser.StudentLessons;
@@ -11,3 +11,5 @@ public interface StudentWSService {
     List<StudentLessons> getMyCources(Integer studentId);
 
 }
+
+

@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.service;
+package kz.bcc.tutorial.balatime.service.admin;
 
 import kz.bcc.tutorial.balatime.model.EduYear;
 import kz.bcc.tutorial.balatime.model.dto.SchedulerRow;

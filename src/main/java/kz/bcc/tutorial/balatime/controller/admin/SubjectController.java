@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import kz.bcc.tutorial.balatime.model.CustomPagination;
 import kz.bcc.tutorial.balatime.model.Subject;
-import kz.bcc.tutorial.balatime.service.adminUser.SubjectService;
+import kz.bcc.tutorial.balatime.service.admin.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -3,7 +3,7 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 import kz.bcc.tutorial.balatime.model.Student;
 import kz.bcc.tutorial.balatime.repository.StudentRepository;
 import kz.bcc.tutorial.balatime.repository.pagination.StudentRepositoryPaging;
-import kz.bcc.tutorial.balatime.service.adminUser.StudentService;
+import kz.bcc.tutorial.balatime.service.admin.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

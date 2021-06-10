@@ -1,43 +1,42 @@
 package kz.bcc.tutorial.balatime.service.impl;
 
-import kz.bcc.tutorial.balatime.model.EduYear;
 import kz.bcc.tutorial.balatime.model.Timetable;
 import kz.bcc.tutorial.balatime.model.dto.LessonItem;
-import kz.bcc.tutorial.balatime.model.dto.SchedulerRow;
+import kz.bcc.tutorial.balatime.model.dto.WorkspaceRow;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
-import kz.bcc.tutorial.balatime.service.admin.TeacherSchedulerService;
+
+import kz.bcc.tutorial.balatime.service.admin.TeacherWorkspaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TeacherSchedulerServiceImpl implements TeacherSchedulerService {
+public class TeacherWorkspaceServiceImpl implements TeacherWorkspaceService {
     @Autowired
     TimetableRepository timetableRepository;
 
     @Override
-    public List<SchedulerRow> getAll(Integer teacherId, EduYear eduYear) {
-        List<SchedulerRow> schedulerTable = new ArrayList<>();
+    public List<WorkspaceRow> getAll(Integer teacherId) {
+        List<WorkspaceRow> workspaceTable = new ArrayList<>();
+        DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
         for (int i = 0; i < 10; i++) {
-            Integer subjectOrder = i + 1;
-            List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndSubjectOrder(teacherId, subjectOrder);
-            SchedulerRow schedulerRow = new SchedulerRow();
-            schedulerRow.setTime((i + 8) + ":00");
-            schedulerRow.setL1(objectMapperDto(timetableListByOrder, DayOfWeek.MONDAY));
-            schedulerRow.setL2(objectMapperDto(timetableListByOrder, DayOfWeek.TUESDAY));
-            schedulerRow.setL3(objectMapperDto(timetableListByOrder, DayOfWeek.WEDNESDAY));
-            schedulerRow.setL4(objectMapperDto(timetableListByOrder, DayOfWeek.THURSDAY));
-            schedulerRow.setL5(objectMapperDto(timetableListByOrder, DayOfWeek.FRIDAY));
-            schedulerRow.setL6(objectMapperDto(timetableListByOrder, DayOfWeek.SATURDAY));
-            schedulerTable.add(schedulerRow);
+
+            List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndDayOfWeek(teacherId, dayOfWeek);
+            WorkspaceRow workspaceRow = new WorkspaceRow();
+            workspaceRow.setTime((i + 8) + ":00");
+            workspaceRow.setDayOfWeek(dayOfWeek);
+            workspaceRow.setLesson( objectMapperDto(timetableListByOrder,dayOfWeek));
+
+            workspaceTable.add(workspaceRow);
         }
 
 
-        return schedulerTable;
+        return workspaceTable;
     }
 
     LessonItem objectMapperDto(List<Timetable> timetableListByOrder, DayOfWeek dayOfWeek) {
@@ -54,7 +53,7 @@ public class TeacherSchedulerServiceImpl implements TeacherSchedulerService {
         } else {
             lessonItem.setClassRoom("");
             lessonItem.setGroup("");
-            lessonItem.setName("empty");
+            lessonItem.setName("Записи нет");
             lessonItem.setTeacher("");
             lessonItem.setFree(true);
         }

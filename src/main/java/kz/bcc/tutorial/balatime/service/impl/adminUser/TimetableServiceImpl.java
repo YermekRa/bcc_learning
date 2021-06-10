@@ -3,7 +3,7 @@ package kz.bcc.tutorial.balatime.service.impl.adminUser;
 import kz.bcc.tutorial.balatime.model.Timetable;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
 import kz.bcc.tutorial.balatime.repository.pagination.TimetableRepositoryPaging;
-import kz.bcc.tutorial.balatime.service.adminUser.TimetableService;
+import kz.bcc.tutorial.balatime.service.admin.TimetableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
