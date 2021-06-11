@@ -24,12 +24,21 @@ public class Journal {
     private Integer id;
     @Column(name = "student_id")
     private Integer studentId;
+    @ManyToOne
+    @JoinColumn(name = "student_id", insertable = false, updatable = false)
+    private Student student;
     @Column(name = "grade_id")
     private Integer gradeId;
     @Column(name = "teacher_id")
     private Integer teacherId;
+    @ManyToOne
+    @JoinColumn(name = "teacher_id", insertable = false, updatable = false)
+    private Teacher teacher;
     @Column(name = "grade")
     private String grade;
     @Column(name = "timetable_id")
     private Integer timeTableId;
+    @ManyToOne
+    @JoinColumn(name = "timetable_id", insertable = false, updatable = false)
+    private Timetable timetable;
 }

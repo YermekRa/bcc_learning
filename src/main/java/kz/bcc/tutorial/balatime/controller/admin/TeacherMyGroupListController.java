@@ -1,7 +1,7 @@
 package kz.bcc.tutorial.balatime.controller.admin;
 
 import io.swagger.annotations.ApiOperation;
-import kz.bcc.tutorial.balatime.model.dto.MyGroupListRow;
+import kz.bcc.tutorial.balatime.model.dto.teacher.MyGroupListRow;
 
 import kz.bcc.tutorial.balatime.service.admin.TeacherMyGroupListService;
 import org.springframework.beans.factory.annotation.Autowired;

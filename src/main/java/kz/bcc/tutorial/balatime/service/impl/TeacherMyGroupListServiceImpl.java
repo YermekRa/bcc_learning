@@ -1,15 +1,12 @@
 package kz.bcc.tutorial.balatime.service.impl;
 
-import kz.bcc.tutorial.balatime.model.Subject;
 import kz.bcc.tutorial.balatime.model.Timetable;
-import kz.bcc.tutorial.balatime.model.dto.LessonItem;
-import kz.bcc.tutorial.balatime.model.dto.MyGroupListRow;
+import kz.bcc.tutorial.balatime.model.dto.teacher.LessonItem;
+import kz.bcc.tutorial.balatime.model.dto.teacher.MyGroupListRow;
 
-import kz.bcc.tutorial.balatime.model.dto.WorkspaceRow;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
 import kz.bcc.tutorial.balatime.service.admin.TeacherMyGroupListService;
 
-import kz.bcc.tutorial.balatime.service.admin.TeacherWorkspaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

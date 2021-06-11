@@ -1,4 +1,4 @@
-package kz.bcc.tutorial.balatime.model.dto;
+package kz.bcc.tutorial.balatime.model.dto.teacher;
 
 import lombok.Data;
 

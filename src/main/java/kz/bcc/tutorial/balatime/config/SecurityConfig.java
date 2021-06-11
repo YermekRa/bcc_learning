@@ -1,6 +1,6 @@
 package kz.bcc.tutorial.balatime.config;
 //        import kz.iitu.springsecurityexample.service.impl.UserServiceImpl;
-        import kz.bcc.tutorial.balatime.service.impl.adminUser.UserServiceImpl;
+        import kz.bcc.tutorial.balatime.service.impl.admin.UserServiceImpl;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.Configuration;
