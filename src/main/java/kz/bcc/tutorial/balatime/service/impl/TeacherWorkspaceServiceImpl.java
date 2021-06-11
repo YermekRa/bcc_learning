@@ -49,6 +49,7 @@ public class TeacherWorkspaceServiceImpl implements TeacherWorkspaceService {
             lessonItem.setGroup(timetable.getClasss().getCode());
             lessonItem.setName(timetable.getSubject().getCode());
             lessonItem.setTeacher(timetable.getTeacher().getFirstName());
+
             lessonItem.setFree(false);
         } else {
             lessonItem.setClassRoom("");

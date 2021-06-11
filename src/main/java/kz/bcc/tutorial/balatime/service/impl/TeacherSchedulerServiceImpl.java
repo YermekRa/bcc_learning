@@ -50,6 +50,8 @@ public class TeacherSchedulerServiceImpl implements TeacherSchedulerService {
             lessonItem.setGroup(timetable.getClasss().getCode());
             lessonItem.setName(timetable.getSubject().getCode());
             lessonItem.setTeacher(timetable.getTeacher().getFirstName());
+            lessonItem.setTeacherln(timetable.getTeacher().getLastName());
+            lessonItem.setTimetableId(timetable.getId());
             lessonItem.setFree(false);
         } else {
             lessonItem.setClassRoom("");

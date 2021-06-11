@@ -51,6 +51,7 @@ public class TeacherMyGroupListServiceImpl implements TeacherMyGroupListService 
                 lessonItem.setGroup(timetable.getClasss().getCode());
                 lessonItem.setName(timetable.getSubject().getCode());
                 lessonItem.setTeacher(timetable.getTeacher().getFirstName());
+                lessonItem.setTeacherln(timetable.getTeacher().getLastName());
                 lessonItem.setFree(false);
             } else {
                 lessonItem.setClassRoom("");
