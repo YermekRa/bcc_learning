@@ -18,5 +18,7 @@ public interface TimetableRepository extends JpaRepository<Timetable, Integer> {
 
     List<Timetable> findAllByTeacherId(Integer teacherId);
 
+    List<Timetable> findAllByClasssAndDayOfWeek(Integer classs, DayOfWeek dayOfWeek);
+    List<Timetable> findAllByClasssIdAndSubjectOrder(Integer classsId, Integer subjectOrder);
 //    Timetable findFirstByTeacherIdAndDayOfWeekAndSubject_order(Integer teacherId, DayOfWeek dayOfWeek, Integer subjectOrd);
 }
