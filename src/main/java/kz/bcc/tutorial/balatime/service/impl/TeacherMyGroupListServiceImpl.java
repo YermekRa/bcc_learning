@@ -1,10 +1,14 @@
 package kz.bcc.tutorial.balatime.service.impl;
 
+import kz.bcc.tutorial.balatime.model.Teacher;
 import kz.bcc.tutorial.balatime.model.Timetable;
+import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.model.dto.teacher.LessonItem;
 import kz.bcc.tutorial.balatime.model.dto.teacher.MyGroupListRow;
 
+import kz.bcc.tutorial.balatime.repository.TeacherRepository;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
+import kz.bcc.tutorial.balatime.repository.UserRepository;
 import kz.bcc.tutorial.balatime.service.admin.TeacherMyGroupListService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +24,20 @@ import java.util.Optional;
 public class TeacherMyGroupListServiceImpl implements TeacherMyGroupListService {
         @Autowired
         TimetableRepository timetableRepository;
-
+        @Autowired
+        UserRepository userRepository;  ///get id by login
+        @Autowired
+        TeacherRepository teacherRepository;  ///get id by login
         @Override
-        public List<MyGroupListRow> getAll(Integer teacherId) {
+        public List<MyGroupListRow> getAll(String username) {
             List<MyGroupListRow> myGroupListTable = new ArrayList<>();
+            User user = userRepository.getUserByLogin(username); ///get id by login
+            Teacher teacher = teacherRepository.findFirstByUserId(user.getId()); //get id by login
+
             DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
             for (int i = 0; i < 10; i++) {
 
-                List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndDayOfWeek(teacherId, dayOfWeek);
+                List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndDayOfWeek(teacher.getId(), dayOfWeek);
                 MyGroupListRow myGroupListRow = new MyGroupListRow();
                 myGroupListRow.setLesson( objectMapperDto(timetableListByOrder,dayOfWeek));
 

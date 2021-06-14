@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -18,10 +19,10 @@ public class TeacherWorkspaceController {
     TeacherWorkspaceService teacherWorkspaceService;
 
     @ApiOperation(value = "Get SchedulerRow map")
-    @GetMapping("/all/teacherId/{teacherId}")
+    @GetMapping("/all")
     public ResponseEntity<List<WorkspaceRow>> getAll(
-            @PathVariable Integer teacherId
+            Principal principal
     ) {
-        return ResponseEntity.ok(teacherWorkspaceService.getAll(teacherId));
+        return ResponseEntity.ok(teacherWorkspaceService.getAll(principal.getName()));
     }
 }

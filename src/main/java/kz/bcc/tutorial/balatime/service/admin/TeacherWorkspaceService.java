@@ -5,5 +5,5 @@ import kz.bcc.tutorial.balatime.model.dto.teacher.WorkspaceRow;
 import java.util.List;
 
 public interface TeacherWorkspaceService {
-     List<WorkspaceRow> getAll(Integer teacherId);
+     List<WorkspaceRow> getAll(String username);
 }

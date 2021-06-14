@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -22,10 +23,10 @@ public class TeacherMyGroupListController {
     TeacherMyGroupListService teacherMyGroupListService;
 
     @ApiOperation(value = "Get SchedulerRow map")
-    @GetMapping("/all/teacherId/{teacherId}")
+    @GetMapping("/all")
     public ResponseEntity<List<MyGroupListRow>> getAll(
-            @PathVariable Integer teacherId
+            Principal principal
     ) {
-        return ResponseEntity.ok(teacherMyGroupListService.getAll(teacherId));
+        return ResponseEntity.ok(teacherMyGroupListService.getAll(principal.getName()));
     }
 }
