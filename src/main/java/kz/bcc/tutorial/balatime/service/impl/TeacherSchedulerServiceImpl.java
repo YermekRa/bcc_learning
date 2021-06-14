@@ -1,10 +1,14 @@
 package kz.bcc.tutorial.balatime.service.impl;
 
 import kz.bcc.tutorial.balatime.model.EduYear;
+import kz.bcc.tutorial.balatime.model.Teacher;
 import kz.bcc.tutorial.balatime.model.Timetable;
+import kz.bcc.tutorial.balatime.model.User;
 import kz.bcc.tutorial.balatime.model.dto.teacher.LessonItem;
 import kz.bcc.tutorial.balatime.model.dto.teacher.SchedulerRow;
+import kz.bcc.tutorial.balatime.repository.TeacherRepository;
 import kz.bcc.tutorial.balatime.repository.TimetableRepository;
+import kz.bcc.tutorial.balatime.repository.UserRepository;
 import kz.bcc.tutorial.balatime.service.admin.TeacherSchedulerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,13 +22,19 @@ import java.util.Optional;
 public class TeacherSchedulerServiceImpl implements TeacherSchedulerService {
     @Autowired
     TimetableRepository timetableRepository;
+    @Autowired
+    UserRepository userRepository;
+    @Autowired
+    TeacherRepository teacherRepository;
 
     @Override
-    public List<SchedulerRow> getAll(Integer teacherId, EduYear eduYear) {
+    public List<SchedulerRow> getAll(String username, EduYear eduYear) {
         List<SchedulerRow> schedulerTable = new ArrayList<>();
+        User user = userRepository.getUserByLogin(username);
+        Teacher teacher = teacherRepository.findFirstByUserId(user.getId());
         for (int i = 0; i < 10; i++) {
             Integer subjectOrder = i + 1;
-            List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndSubjectOrder(teacherId, subjectOrder);
+            List<Timetable> timetableListByOrder = timetableRepository.findAllByTeacherIdAndSubjectOrder(teacher.getId(), subjectOrder);
             SchedulerRow schedulerRow = new SchedulerRow();
             schedulerRow.setTime((i + 8) + ":00");
             schedulerRow.setL1(objectMapperDto(timetableListByOrder, DayOfWeek.MONDAY));

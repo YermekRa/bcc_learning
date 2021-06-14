@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -19,11 +20,11 @@ public class TeacherSchedulerController {
     TeacherSchedulerService teacherSchedulerService;
 
     @ApiOperation(value = "Get SchedulerRow map")
-    @GetMapping("/all/teacherId/{teacherId}")
+    @GetMapping("/all")
     public ResponseEntity<List<SchedulerRow>> getAll(
-            @PathVariable Integer teacherId,
-            @RequestParam EduYear eduYear
+            @RequestParam EduYear eduYear,
+            Principal principal
     ) {
-        return ResponseEntity.ok(teacherSchedulerService.getAll(teacherId, eduYear));
+        return ResponseEntity.ok(teacherSchedulerService.getAll(principal.getName(), eduYear));
     }
 }
