@@ -18,14 +18,13 @@ public class UserAccessController {
     @PostMapping("/login")
     @CrossOrigin(origins = "http://localhost:4200")
     public BUser loginUser(@RequestBody BUser user) throws Exception {
+        return userServiceAccess.findByLoginIgnoreCase(user.getLogin());
+    }
 
-        BUser userObj = userServiceAccess.findByLoginIgnoreCase(user.getLogin());
-
-        if (userObj != null) {
-            return user;
-        } else {
-            throw new Exception("User Access Exception");
-        }
+    @PostMapping("/registration")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public BUser registrationUser(@RequestBody BUser user) throws Exception {
+        return userServiceAccess.registrationUser(user);
     }
 
 }
